@@ -1,0 +1,129 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity Proyecto is
+  Port (
+        BotonIzq: IN STD_LOGIC;
+        CLK , RST: IN STD_LOGIC;
+        DisplayCoche: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+        Segmentos: OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+
+   );
+end Proyecto;
+
+architecture Behavioral of Proyecto is
+
+SIGNAL boton_sinc : std_logic;
+SIGNAL boton_deb : std_logic;
+SIGNAL selector : STD_LOGIC_VECTOR (2 DOWNTO 0) :="000";
+SIGNAL posicionCoche: UNSIGNED (2 DOWNTO 0) :="000";
+-- SIGNAL coche_seg: STD_LOGIC_VECTOR (6 DOWNTO 0);
+
+
+COMPONENT sincronizador is
+        Port (
+    sync_in: IN STD_LOGIC;
+    clk: IN STD_LOGIC;
+    sync_out: OUT STD_LOGIC
+        );
+END COMPONENT;
+
+COMPONENT debouncer is
+        Port ( 
+           clk : in STD_LOGIC;
+           rst : in STD_LOGIC;
+           btn_in : in STD_LOGIC;
+           btn_out : out STD_LOGIC);    
+
+END COMPONENT;
+
+
+COMPONENT Clock is
+        Port (
+           clk: in STD_LOGIC;
+           selector: out STD_LOGIC_VECTOR (2 DOWNTO 0)
+);
+
+END COMPONENT;
+
+
+ COMPONENT coche is
+         Port (
+              BotonIzq: IN STD_LOGIC;
+              clk: IN STD_LOGIC;
+              Puntero: OUT UNSIGNED (2 DOWNTO 0) -- Display que mostrará el coche
+    );
+
+ END COMPONENT;
+
+
+begin
+
+Inst_sincronizador: sincronizador PORT MAP(
+         sync_in => BotonIzq,
+         clk => clk,
+         sync_out => boton_sinc
+         );
+         
+Inst_debouncer: debouncer PORT MAP(
+        clk => clk,
+        rst => rst,
+        btn_in => boton_sinc,
+        btn_out => boton_deb
+        );
+        
+Inst_Clock: Clock PORT MAP(
+        clk => clk, 
+        selector => selector
+        );
+        
+Inst_coche: coche PORT MAP (
+        BotonIzq => boton_deb,
+        clk => clk,
+        Puntero => posicionCoche
+        );
+
+--PROCESS(CLK, BotonIzq)
+--    BEGIN
+--    IF (CLK = '1' AND CLK'EVENT) THEN
+--        IF (BotonIzq = '1') THEN
+--            posicionCoche <= to_unsigned(to_integer(posicionCoche) + 1,3);  --Pasamos a entero solo para poder hacer la suma y luego devolvemos a unsigned again.
+--        ELSIF posicionCoche = "111" THEN
+--            posicionCoche <= "111";  -- Si ya está a la izquierda del todo, no mover mas.
+--        END IF;
+--    ELSE
+--        posicionCoche <= posicionCoche;
+--    END IF;    
+--END PROCESS;
+        
+PROCESS(CLK, RST, selector, posicionCoche)
+    BEGIN            
+    CASE selector IS
+        WHEN "000" => 
+            DisplayCoche <= "11111110";
+        WHEN "001" => 
+            DisplayCoche <= "11111101";
+        WHEN "010" => 
+            DisplayCoche <= "11111011";
+        WHEN "011" => 
+            DisplayCoche <= "11110111";
+        WHEN "100" => 
+            DisplayCoche <= "11101111";
+        WHEN "101" => 
+            DisplayCoche <= "11011111";
+        WHEN "110" => 
+            DisplayCoche <= "10111111";
+        WHEN "111" => 
+            DisplayCoche <= "01111111";
+        WHEN OTHERS =>
+    END CASE;
+    
+    IF STD_LOGIC_VECTOR(posicionCoche) = selector THEN
+        Segmentos <= "0111111";
+    ELSE
+        Segmentos <="1111111";
+    END IF;
+END PROCESS;
+end Behavioral;
+
