@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Proyecto.srcs/sources_1/new/Clock.vhd" \
+"../../../../Proyecto.srcs/sources_1/new/Proyecto.vhd" \
+"../../../../Proyecto.srcs/sources_1/new/debouncer.vhd" \
+"../../../../Proyecto.srcs/sources_1/new/sincronizador.vhd" \
+"../../../../Proyecto.srcs/sim_1/new/proyecto_tb.vhd" \
+
+# Do not sort compile order
+nosort

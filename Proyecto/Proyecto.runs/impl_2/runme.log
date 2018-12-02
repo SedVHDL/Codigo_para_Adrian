@@ -1,0 +1,146 @@
+
+*** Running vivado
+    with args -log Proyecto.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Proyecto.tcl -notrace
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source Proyecto.tcl -notrace
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 262.688 ; gain = 40.965
+Command: link_design -top Proyecto -part xc7a100tcsg324-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc]
+CRITICAL WARNING: [Common 17-69] Command failed: 'L23' is not a valid site or package pin name. [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc:61]
+CRITICAL WARNING: [Common 17-69] Command failed: 'J23' is not a valid site or package pin name. [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc:63]
+CRITICAL WARNING: [Common 17-69] Command failed: 'K23' is not a valid site or package pin name. [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc:65]
+CRITICAL WARNING: [Common 17-69] Command failed: 'K22' is not a valid site or package pin name. [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc:66]
+CRITICAL WARNING: [Common 17-69] Command failed: 'L22' is not a valid site or package pin name. [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc:67]
+CRITICAL WARNING: [Common 17-69] Command failed: 'J25' is not a valid site or package pin name. [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc:68]
+WARNING: [Vivado 12-584] No ports matched 'posicionOUT[2]'. [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc:257]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc:257]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'posicionOUT[1]'. [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc:258]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc:258]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'posicionOUT[0]'. [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc:259]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc:259]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-69] Command failed: 'D23' is not a valid site or package pin name. [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc:269]
+CRITICAL WARNING: [Common 17-69] Command failed: 'H21' is not a valid site or package pin name. [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc:270]
+CRITICAL WARNING: [Common 17-69] Command failed: 'G21' is not a valid site or package pin name. [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc:271]
+CRITICAL WARNING: [Common 17-69] Command failed: 'H23' is not a valid site or package pin name. [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc:272]
+CRITICAL WARNING: [Common 17-69] Command failed: 'H24' is not a valid site or package pin name. [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc:273]
+CRITICAL WARNING: [Common 17-69] Command failed: 'J21' is not a valid site or package pin name. [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc:274]
+CRITICAL WARNING: [Common 17-69] Command failed: 'H22' is not a valid site or package pin name. [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc:275]
+CRITICAL WARNING: [Common 17-69] Command failed: 'J24' is not a valid site or package pin name. [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc:276]
+Finished Parsing XDC File [C:/Users/Alex/Documents/SED/Vivado/digilent-xdc-master/Nexys-4-DDR-Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+7 Infos, 3 Warnings, 17 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 591.082 ; gain = 323.191
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 605.223 ; gain = 14.141
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: c44a2470
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:01:30 . Memory (MB): peak = 1135.293 ; gain = 530.070
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: c44a2470
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1135.293 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: c44a2470
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1135.293 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 15c30c336
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1135.293 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 4 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 15c30c336
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1135.293 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 185acc428
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1135.293 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 185acc428
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1135.293 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.207 . Memory (MB): peak = 1135.293 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 185acc428
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1135.293 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 185acc428
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.313 . Memory (MB): peak = 1135.293 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 185acc428
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1135.293 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+23 Infos, 3 Warnings, 17 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:18 ; elapsed = 00:01:48 . Memory (MB): peak = 1135.293 ; gain = 544.211
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:03 . Memory (MB): peak = 1135.293 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Alex/Desktop/Proyecto/Proyecto.runs/impl_2/Proyecto_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1135.293 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file Proyecto_drc_opted.rpt -pb Proyecto_drc_opted.pb -rpx Proyecto_drc_opted.rpx
+Command: report_drc -file Proyecto_drc_opted.rpt -pb Proyecto_drc_opted.pb -rpx Proyecto_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
